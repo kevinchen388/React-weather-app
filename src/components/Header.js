@@ -2,19 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Header = (props) => {
+
+  const date = new Date();
+  console.log(date);
+
   return (
     <header>
-      <h1>{props.title}</h1>
+      <h1>{props.location}</h1>
+      <p>{date}</p>
     </header>
   )
 }
 
 Header.defaultProps = {
-  title: 'Dallas',
+  location: 'Chicago, IL',
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  location: PropTypes.string
 }
 
 export default Header
