@@ -24,6 +24,13 @@ function App() {
   //forecast
   let [forecast, setForecast] = useState([]);
 
+  //toggle
+  const [toggle, setToggle] = useState(false)
+
+  function handleToggle() {
+    setToggle(!toggle);
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,6 +74,10 @@ function App() {
       <Header 
         date={dateString} >
       </Header>
+      <ToggleButton
+        toggle={toggle} 
+        onChange={handleToggle}>
+      </ToggleButton>
       <div className="container">
         <CurrentForecast
           currentTemp={currentTemp} 
@@ -74,9 +85,6 @@ function App() {
           currentDescription={currentDescription} 
           currentIcon={currentIcon} >
         </CurrentForecast>
-        <ToggleButton>
-
-        </ToggleButton>
         <ForecastWeek forecast={forecast.slice(0,5)}></ForecastWeek>
       </div>
     </div>
