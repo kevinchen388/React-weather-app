@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+
 
 const CurrentForecast = (props) => {
+
   return (
     <div>
-      <h1>{props.title}</h1>
       <p>{props.currentTemp}</p>
+      <img src={props.currentIcon} alt="current weather icon"></img>
+      <p>{props.currentDescription}</p>
       <p>{props.currentWind}</p>
-      <p>{props.currentIcon}</p>
     </div>
   )
 }

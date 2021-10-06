@@ -1,13 +1,10 @@
 import React from 'react'
 
-const ToggleButton = (props) => {
-
-  const onClick = () => {
-    console.log('Clicked')
-  }
-
+const ToggleButton = () => {
   return (
-    <button onClick={onClick} className='btn'> Button </button>        
+    <div>
+      
+    </div>
   )
 }
 
