@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const ToggleButton = (props) => {
-  function handleToggle(props.toggle) {
-    // Here, we invoke the callback with the new value
-    props.onChange(event.target.value);
-}
+const ToggleButton = ({ units, onUnitsChange }) => {
+  const [isMetric, setIsMetric] = useState( units.match(/metric/i) ? true : false);
+
+  const handleChange = () => {
+    onUnitsChange(units.match(/metric/i) ? 'imperial' : 'metric');
+    setIsMetric(!isMetric);
+  }
+
 
   return (
     <div>
       <p>props.toggle</p>
       <p>C°</p>
       <p>F°</p>
-      <button text="click me" onClick={handleToggle}></button>
+      <button text="click me" onClick={handleChange}></button>
     </div>
   )
+  
 }
 
 export default ToggleButton

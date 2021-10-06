@@ -25,10 +25,11 @@ function App() {
   let [forecast, setForecast] = useState([]);
 
   //toggle
-  const [toggle, setToggle] = useState(false)
+  const [units, setUnits] = useState('metric')
 
-  function handleToggle() {
-    setToggle(!toggle);
+  const handleUnitsChange = (newUnits) => {
+    setUnits(newUnits);
+    console.log("hangleunitschange")
   }
 
 
@@ -75,8 +76,8 @@ function App() {
         date={dateString} >
       </Header>
       <ToggleButton
-        toggle={toggle} 
-        onChange={handleToggle}>
+        units={units} 
+        onUnitsChange={handleUnitsChange}>
       </ToggleButton>
       <div className="container">
         <CurrentForecast
