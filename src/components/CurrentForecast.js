@@ -12,7 +12,7 @@ const CurrentForecast = (props) => {
     currentWindUnit = ' mph';
   }
   else {
-    currentTempNew = (Number(props.currentTemp) - 32) * 5/9;
+    currentTempNew = (Math.round((Number(props.currentTemp) - 32) * 5/9));
     currentWindNew = (Number(props.currentWind) * 1.609344).toFixed(1);
     currentWindUnit = ' km/h';
   }
