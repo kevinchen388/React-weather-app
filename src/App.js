@@ -40,7 +40,7 @@ function App() {
       //current
       setCurrentTemp(Math.round(response.data.current.temp));
       setCurrentWind(Math.round(response.data.current.wind_speed));
-      setCurrentDescription(response.data.current.weather[0].description);
+      setCurrentDescription(Capitalize(response.data.current.weather[0].description));
       setCurrentIcon(Iconify(response.data.current.weather[0].main));
 
       //next day
@@ -70,22 +70,24 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="app">
       <Header 
         date={dateString} >
       </Header>
-      <ToggleButton
-        units={units} 
-        onUnitsChange={handleUnitsChange}>
-      </ToggleButton>
       <div className="container">
-        <CurrentForecast
-          currentTemp={currentTemp} 
-          currentWind={currentWind} 
-          currentDescription={currentDescription} 
-          currentIcon={currentIcon} 
-          units={units}>
-        </CurrentForecast>
+        <div className="upper"> 
+          <CurrentForecast
+            currentTemp={currentTemp} 
+            currentWind={currentWind} 
+            currentDescription={currentDescription} 
+            currentIcon={currentIcon} 
+            units={units}>
+          </CurrentForecast>
+          <ToggleButton
+            units={units} 
+            onUnitsChange={handleUnitsChange}>
+          </ToggleButton>
+        </div>
         <ForecastWeek forecast={forecast.slice(0,5)} units={units}>
         </ForecastWeek>
       </div>
@@ -110,6 +112,17 @@ function Iconify(iconDescription) {
   else {
     return '../images/Cloud-Sun.svg';
   }
+}
+
+
+function Capitalize(sentence) {
+  const words = sentence.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+  }
+
+  return words.join(" ");
 }
 
 

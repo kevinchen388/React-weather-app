@@ -11,7 +11,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
 
 
   return (
-    <div>
+    <div className="toggleButton">
       {/* <p>Imperial</p>
       <p>Metric</p>
       <button text="Change units" onClick={handleChange}>

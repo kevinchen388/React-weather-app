@@ -18,11 +18,12 @@ const CurrentForecast = (props) => {
   }
 
   return (
-    <div>
-      <p>{currentTempNew + '°'}</p>
-      <img src={props.currentIcon} alt="current weather icon"></img>
-      <p>{props.currentDescription}</p>
-      <p>{currentWindNew + currentWindUnit}</p>
+    <div className="currentForecast">
+      <p className="currentTemp">{currentTempNew + '°'}<img src={props.currentIcon} alt="current weather icon"></img></p>
+      <div className="currentDescription">
+        <p>{props.currentDescription}</p>
+        <p>{currentWindNew + currentWindUnit}</p>
+      </div>
     </div>
   )
 }

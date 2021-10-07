@@ -25,12 +25,12 @@ const ForecastWeek = (props) => {
   }
   
   return (
-    <div>
+    <div className="forecastWeek">
       {forecastNew.map((forecastDay) => (
-        <div key={forecastDay.day}>
+        <div key={forecastDay.day} className="forecastDay">
           <h2>{forecastDay.day}</h2>
-          <h2>{forecastDay.temp}</h2>
           <img src={forecastDay.icon} alt="current weather icon"></img>
+          <h3>{forecastDay.temp + '°'}</h3>
         </div>
       ))}
 

@@ -1,22 +1,118 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: cornflowerblue;
+  font-family: 'Open Sans', sans-serif;;
+  background: linear-gradient(45.38deg, #115DA3 0.65%, #4ECFED 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  vertical-align: middle;
 }
 
 img{
-  width: 20px;
+  width: 45px;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 12px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: white;
+  margin: 8px 0px;
 }
 
 header{
   color: white;
+  text-align: center;
+  margin-top: 15%;
+}
+
+img.location {
+  width: 12px;
+  margin-right: 8px;
+}
+
+.container{
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.203436);
+  border-radius: 3px;
+  margin: 3% 10% 15% 10%;
+}
+
+.upper{
+  background: #D9FBFF;
+  background-image: url(/src/images/Dallas.svg);
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size:cover; 
+  height: 368px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.currentForecast{
+  align-self: flex-start;
+  display: flex;
+}
+
+.currentForecast p{
+  color: #65AED5;
+}
+
+.currentTemp{
+  font-size: 48px;
+  margin: 24px 16px;
+}
+
+.currentDescription{
+  align-content: center;
+  margin: 24px 0px;
+
+}
+
+.toggleButton{
+  margin: 24px 16px;
+}
+
+.forecastWeek{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.forecastDay{
+  flex: 1 1 auto;
+  padding: 16px;
+  text-align: center;
+  border-left: solid 1px #D8D8D8;
+}
+
+.forecastDay h2{
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  color: #4a4a4a;
+  margin: 0px 0px 8px 0px;
+
+}
+
+.forecastDay h3{
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: #4a4a4a;
+  margin: 0px;
+  position: relative;
+  left: 5px;
 }

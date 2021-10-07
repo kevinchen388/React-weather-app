@@ -5,8 +5,8 @@ const Header = (props) => {
 
   return (
     <header>
-      <img src='../images/location_on.svg' alt="location icon"/>
-      <h1>{props.location}</h1>
+      
+      <h1><img src='../images/location_on.svg' alt='location icon' className='location'/>{props.location}</h1>
       <p>{props.date}</p>
     </header>
   )
