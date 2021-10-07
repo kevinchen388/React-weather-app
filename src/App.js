@@ -25,11 +25,10 @@ function App() {
   let [forecast, setForecast] = useState([]);
 
   //toggle
-  const [units, setUnits] = useState('metric')
+  const [units, setUnits] = useState('imperial')
 
   const handleUnitsChange = (newUnits) => {
     setUnits(newUnits);
-    console.log("hangleunitschange")
   }
 
 
@@ -39,8 +38,8 @@ function App() {
       console.log(response.data);
 
       //current
-      setCurrentTemp(Math.round(response.data.current.temp) + '°');
-      setCurrentWind(Math.round(response.data.current.wind_speed) + ' mph');
+      setCurrentTemp(Math.round(response.data.current.temp));
+      setCurrentWind(Math.round(response.data.current.wind_speed));
       setCurrentDescription(response.data.current.weather[0].description);
       setCurrentIcon(Iconify(response.data.current.weather[0].main));
 
@@ -84,9 +83,11 @@ function App() {
           currentTemp={currentTemp} 
           currentWind={currentWind} 
           currentDescription={currentDescription} 
-          currentIcon={currentIcon} >
+          currentIcon={currentIcon} 
+          units={units}>
         </CurrentForecast>
-        <ForecastWeek forecast={forecast.slice(0,5)}></ForecastWeek>
+        <ForecastWeek forecast={forecast.slice(0,5)} units={units}>
+        </ForecastWeek>
       </div>
     </div>
   );
