@@ -33,7 +33,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
           onColor="#66AFD5"
           offHandleColor="#FFFFFF"
           onHandleColor="#FFFFFF"
-          height={40}
+          height={32}
           width={70}
           borderRadius={20}
   
@@ -44,7 +44,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100%",
-                fontSize: 16,
+                fontSize: 14,
                 color: "#FFFFFF",
                 paddingRight: 2
               }}
@@ -59,7 +59,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100%",
-                fontSize: 16,
+                fontSize: 14,
                 color: "#FFFFFF",
                 paddingRight: 2
               }}
@@ -75,7 +75,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
                 alignItems: "center",
                 height: "100%",
                 color: "#2685BD",
-                fontSize: 16
+                fontSize: 14
               }}
             >
               C°
@@ -89,7 +89,7 @@ const ToggleButton = ({ units, onUnitsChange }) => {
                 alignItems: "center",
                 height: "100%",
                 color: "#2685BD",
-                fontSize: 16
+                fontSize: 14
               }}
             >
               F°

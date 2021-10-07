@@ -6,7 +6,8 @@ body {
 }
 
 .app {
-  vertical-align: middle;
+  margin: 0 auto;
+  padding: 0 10%;
 }
 
 img{
@@ -26,7 +27,7 @@ p{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 12px;
+  line-height: 16px;
   color: white;
   margin: 8px 0px;
 }
@@ -34,7 +35,7 @@ p{
 header{
   color: white;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 img.location {
@@ -46,16 +47,36 @@ img.location {
   background-color: white;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.203436);
   border-radius: 3px;
-  margin: 3% 10% 15% 10%;
+  margin: 3% auto 15% auto;
+  position: relative;
+  max-width: 800px;
 }
+
+.decorCloud{
+  top: 60px;
+  width: 210px; 
+  right: -80px; 
+  position: absolute;
+  z-index: 100;
+}
+
+.decorCloud1{
+  top: 120px;
+  width: 190px; 
+  left: -90px; 
+  position: absolute;
+  z-index: 101;
+}
+
 
 .upper{
   background: #D9FBFF;
-  background-image: url(/src/images/Dallas.svg);
+  background-image: url(/src/images/Dallas_full.svg);
   background-position: center;
   background-repeat: no-repeat; 
   background-size:cover; 
-  height: 368px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.203436);
+  height: 400px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -68,11 +89,12 @@ img.location {
 
 .currentForecast p{
   color: #65AED5;
+  line-height: 10px;
 }
 
 .currentTemp{
   font-size: 48px;
-  margin: 24px 16px;
+  margin: 24px 16px 24px 24px;
 }
 
 .currentDescription{
@@ -82,7 +104,7 @@ img.location {
 }
 
 .toggleButton{
-  margin: 24px 16px;
+  margin: 24px;
 }
 
 .forecastWeek{

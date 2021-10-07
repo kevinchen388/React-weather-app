@@ -75,6 +75,8 @@ function App() {
         date={dateString} >
       </Header>
       <div className="container">
+        <img src="/images/Cloud.svg" className="decorCloud"/>
+        <img src="/images/Cloud-1.svg" className="decorCloud1"/>
         <div className="upper"> 
           <CurrentForecast
             currentTemp={currentTemp} 
