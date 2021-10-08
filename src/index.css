@@ -53,7 +53,7 @@ img.location {
 }
 
 .decorCloud{
-  top: 60px;
+  top: 50px;
   width: 140px; 
   right: -40px; 
   position: absolute;
@@ -67,7 +67,6 @@ img.location {
   position: absolute;
   z-index: 101;
 }
-
 
 .upper{
   background: #D9FBFF;
@@ -96,6 +95,10 @@ img.location {
   color: #65AED5;
   font-weight: 600;
   line-height: 10px;
+}
+
+.currentTemp p {
+  font-weight: 400;
 }
 
 .currentTemp{
@@ -179,10 +182,12 @@ img.location {
   
   .decorCloud{
     width: 210px; 
+    right: -80px; 
   }
   
   .decorCloud1{
     width: 190px; 
+    left: -80px; 
   }
   
   .upper{
