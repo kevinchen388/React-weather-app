@@ -1,8 +1,10 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Open Sans', sans-serif;
   background: linear-gradient(45.38deg, #115DA3 0.65%, #4ECFED 100%);
+  background-attachment: fixed;
+  height: 100%;
 }
 
 .app {
@@ -46,7 +48,7 @@ img.location {
   background-color: white;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.203436);
   border-radius: 3px;
-  margin: 10% auto 30% auto;
+  margin: 5% auto 25% auto;
   position: relative;
 }
 
@@ -60,7 +62,7 @@ img.location {
 
 .decorCloud1{
   top: 120px;
-  width: 120px; 
+  width: 130px; 
   left: -40px; 
   position: absolute;
   z-index: 101;
@@ -108,7 +110,6 @@ img.location {
   margin: 4px 0px;
   flex-basis: 100%;
   text-align: center;
-
 }
 
 .toggleButton{
@@ -124,7 +125,6 @@ img.location {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin: 8px 0px;
 }
 
 .forecastDay{
@@ -244,5 +244,5 @@ img.location {
   .forecastDay h2{
     font-size: 14px;
   }
-  
+
 }
